@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Tabela de Cadastro</title>
+</head>
+<body>
+    <h1>Cadastro de Funcionários</h1>
+    <form>
+        <table border="1" width="600">
+
+            <tbody>
+                <tr>
+                    <th>
+                       <label for="nome">Nome Completo</label>
+                       <input
+                        type="text" 
+                        id="nome" 
+                        name="nome"
+                         required
+                        >
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="cpf">CPF</label>
+                        <input 
+                        type="text" 
+                        id="cpf" 
+                        name="cpf"
+                        placeholder="000.000.000-00"
+                        maxlength="14" 
+                        required
+                        >
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="email">E-mail</label>
+                        <input 
+                        type="email" 
+                        id="email" 
+                        name="email"
+                        required
+                        >
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="telefone">Telefone</label>
+                        <input 
+                        type="int" 
+                        id="telefone" 
+                        name="telefone"
+                        placeholder="(00) 00000-0000"
+                        required
+                        >
+                        
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="nascimento"> Data de nascimento</label>
+                        <input
+                        type="date"
+                        id="nascimento"
+                        name="nascimento"
+                        required
+                        >
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="cargo">Cargo</label>
+                        <select id="cargo" name="cargo">
+                            <option value="">
+                                Selecione
+                            </option>
+                            <option value="ceo">
+                                CEO / Presidente
+                            </option>
+                            <option value="diretor">
+                                Diretor
+                            </option>
+                            <option value="socio">
+                                 Sócio 
+                            </option>
+                            <option value="Analista">
+                                 Analista 
+                            </option>
+                            <option value="Tecnico">
+                                 Técnico 
+                            </option>
+                            <option value="Assistente">
+                                 Assistente
+                            </option>
+                            <option value="Gerente">
+                                 Gerente
+                            </option>
+                            <option value="Coordenador / Supervisor">
+                                 Coordenador / Supervisor
+                            </option>
+                            <option value="Auxiliar">
+                                 Auxiliar
+                            </option>
+                            <option value="Estagiario">
+                                 Estagiário
+                            </option>
+
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="turno">Turno</label>
+                     </td>
+
+                    <td>
+                        <input type="radio" id="manha" name="turno">
+                        <label for="manha">Manhã</label>
+
+                        <input type="radio" id="tarde" name="turno">
+                        <label for="tarde">Tarde</label>
+
+                        <input type="radio" id="noite" name="turno">
+                        <label for="noite">Noite</label>
+                    </td>
+                </tr>
+                <tr>
+                         <tr>
+                    <th>
+                        <label for="setor">Setor</label>
+                        <select id="setor" name="setor">
+                            <option value="">
+                                Selecione
+                            </option>
+                            <option value="pj">
+                                PJ 
+                            </option>
+                            <option value="Jovem Aprendiz">
+                                Jovem Aprendiz
+                            </option>
+                            <option value="Estagio">
+                                 Estágio 
+                            </option>
+                            <option value="clt">
+                                 CLT Determinado
+                            </option>
+                            <option value="clt2">
+                                 CLT Indeterminado
+                            </option>
+                            <option value="experiencia">
+                                Contrato de Experiência
+                            </option>
+                            <option value="temporario">
+                                Trabalho Temporário
+                            </option>
+                        </select>
+                    </th>
+                </tr>
+                    <td><label for="conhecimento">Conhecimento / Tecnologias:</label></td>
+                    <td>
+                        <input type="checkbox" id="conhecimento" name="linguagens" value="linguagens" required>
+                        <label for="linguagens">Linguagens de Programação</label>
+                        <input type="checkbox" id="conhecimento" name="ferramentas" value="ferramentas" required>
+                        <label for="ferramentas">Ferramentas e Software</label>
+                        <input type="checkbox" id="conhecimento" name="marketing" value="marketing" required>
+                        <label for="marketing">Marketing Digital</label>
+                        <input type="checkbox" id="conhecimento" name="financas" value="financas" required>
+                        <label for="financas">Finanças</label>
+                        <input type="checkbox" id="conhecimento" name="atendimento" value="atendimento" required>
+                        <label for="atendimento">Atendimento ao Cliente</label>
+                        <input type="checkbox" id="conhecimento" name="outro" value="outro" required>
+                        <label for="outro">Outros</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="observacoes">Observações:</label></td>
+                    <td>
+                        <textarea 
+                            id="observacoes"
+                            name="observacoes"
+                            rows="5"
+                            cols="40"
+                        >   
+                        </textarea>
+                    </td>
+                </tr>
+ 
+                <tr>
+                    <td><label for="termos">Aceite dos termos:</label></td>
+                    <td>
+                        <input type="checkbox" id="termos" name="termos" required>
+                        <label for="termos">Concordo com os termos</label>
+                    </td>
+                </tr>
+ 
+                <tr>
+                    <td><label for="termos">Clique:</label></td>
+                    <td>
+                        <button type="submit">Cadastrar</button>
+                        <button type="reset">Limpar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>  
+    </form>
+</body>
+</html>

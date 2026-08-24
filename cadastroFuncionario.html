@@ -1,0 +1,234 @@
+O ChatGPT disse:
+Ah, entendi agora 😄 Você quer duas colunas: uma coluna para o nome do campo (Nome Completo) e outra coluna ao lado para o espaço onde a pessoa vai preencher.
+
+Fica assim:
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabela de Cadastro</title>
+</head>
+
+<body>
+
+    <h1>Cadastro de Funcionários</h1>
+
+    <form>
+        <table border="1" width="600">
+
+            <tr>
+                <td>
+                    <label for="nome">Nome Completo</label>
+                </td>
+                <td>
+                    <input type="text" id="nome" name="nome" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="cpf">CPF</label>
+                </td>
+                <td>
+                    <input
+                        type="text"
+                        id="cpf"
+                        name="cpf"
+                        placeholder="000.000.000-00"
+                        maxlength="14"
+                        required
+                    >
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="email">E-mail</label>
+                </td>
+                <td>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="telefone">Telefone</label>
+                </td>
+                <td>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(00) 00000-0000"
+                        required
+                    >
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="nascimento">Data de nascimento</label>
+                </td>
+                <td>
+                    <input
+                        type="date"
+                        id="nascimento"
+                        name="nascimento"
+                        required
+                    >
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="cargo">Cargo</label>
+                </td>
+                <td>
+                    <select id="cargo" name="cargo" required>
+                        <option value="">Selecione</option>
+                        <option value="ceo">CEO / Presidente</option>
+                        <option value="diretor">Diretor</option>
+                        <option value="socio">Sócio</option>
+                        <option value="analista">Analista</option>
+                        <option value="tecnico">Técnico</option>
+                        <option value="assistente">Assistente</option>
+                        <option value="gerente">Gerente</option>
+                        <option value="coordenador">Coordenador / Supervisor</option>
+                        <option value="auxiliar">Auxiliar</option>
+                        <option value="estagiario">Estagiário</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> salário </label>
+                </td>
+                <td>
+                   <input
+                        type="number"
+                        id="salario"
+                        name="salario"
+                        required
+                    > 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Turno</label>
+                </td>
+                <td>
+                    <input type="radio" id="manha" name="turno" value="manha" required>
+                    <label for="manha">Manhã</label>
+
+                    <input type="radio" id="tarde" name="turno" value="tarde">
+                    <label for="tarde">Tarde</label>
+
+                    <input type="radio" id="noite" name="turno" value="noite">
+                    <label for="noite">Noite</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="setor">Setor</label>
+                </td>
+                <td>
+                    <select id="setor" name="setor" required>
+                        <option value="">Selecione</option>
+                        <option value="pj">PJ</option>
+                        <option value="jovem_aprendiz">Jovem Aprendiz</option>
+                        <option value="estagio">Estágio</option>
+                        <option value="clt_determinado">CLT Determinado</option>
+                        <option value="clt_indeterminado">CLT Indeterminado</option>
+                        <option value="experiencia">Contrato de Experiência</option>
+                        <option value="temporario">Trabalho Temporário</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Conhecimento / Tecnologias</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="linguagens" name="conhecimento" value="linguagens">
+                    <label for="linguagens">Linguagens de Programação</label>
+
+                    <br>
+
+                    <input type="checkbox" id="ferramentas" name="conhecimento" value="ferramentas">
+                    <label for="ferramentas">Ferramentas e Software</label>
+
+                    <br>
+
+                    <input type="checkbox" id="marketing" name="conhecimento" value="marketing">
+                    <label for="marketing">Marketing Digital</label>
+
+                    <br>
+
+                    <input type="checkbox" id="financas" name="conhecimento" value="financas">
+                    <label for="financas">Finanças</label>
+
+                    <br>
+
+                    <input type="checkbox" id="atendimento" name="conhecimento" value="atendimento">
+                    <label for="atendimento">Atendimento ao Cliente</label>
+
+                    <br>
+
+                    <input type="checkbox" id="outro" name="conhecimento" value="outro">
+                    <label for="outro">Outros</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="observacoes">Observações</label>
+                </td>
+                <td>
+                    <textarea
+                        id="observacoes"
+                        name="observacoes"
+                        rows="5"
+                        cols="40"
+                    ></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="termos">Aceite dos termos</label>
+                </td>
+                <td>
+                    <input
+                        type="checkbox"
+                        id="termos"
+                        name="termos"
+                        required
+                    >
+                    <label for="termos">Concordo com os termos</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Ações</label>
+                </td>
+                <td>
+                    <button type="submit">Cadastrar</button>
+                    <button type="reset">Limpar</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+</body>
+</html>
